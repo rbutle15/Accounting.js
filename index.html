@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html" charset="utf-8">
+    <title>Accouting.js</title>
+    <link rel="stylesheet" href="css/login.css" type="text/css">
+    <link rel="stylesheet" href="css/redmond/jquery-ui-1.8.18.custom.css" type="text/css">
+</head>
+<body>
+<div class="angled" style="height: 100%">
+    <div class="header">
+        <img class="large-logo" src="file:///C:/Users/rbutler/WebstormProjects/Accounting/images/Accountingjs.png">
+    </div>
+    <div class="content">
+        <div class="ui-corner-all ui-widget-content login" style="width: 450px;">
+            <table class="login" style="width: 100%;">
+                <tbody>
+
+                    <tr>
+                        <td style="text-align: right;"><label>Username:</label></td>
+                        <td><input class="ui-widget-content ui-corner-all" style="font-size: 1.1em; height: 30px;" type="text" name="username" id="username" size="25" /></td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: right;">
+                        <label>Password:</label>
+                        </td>
+                        <td>
+                        <input class="ui-widget-content ui-corner-all" style="font-size: 1.1em; height: 30px;" type="password" name="password" id="password" size="25" />
+                        </td>
+                    </tr>
+                <tr>
+                    <td></td>
+                    <td><button id="login">Login</button></td>
+                </tr>
+                    <tr><td colspan="2"><hr style="color: #363636; opacity: 0.5;" /></td></tr>
+                    <tr>
+                        <td></td>
+                        <td style="text-align: right;">
+                            <span style="position: relative;"> Powered By:</span>
+                            <img style="width: 32px; height:  32px;" src="file:///C:/Users/rbutler/WebstormProjects/Accounting/images/jquery-icon-64px.png" />
+                            <img style="width: 32px; height:  32px;" src="file:///C:/Users/rbutler/WebstormProjects/Accounting/images/couchdb-icon-blue-64px.png" />
+                            <img style="width: 32px; height:  32px;" src="file:///C:/Users/rbutler/WebstormProjects/Accounting/images/oauth-icon-64px.png" />
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="ui-corner-all ui-widget-content login" style="width: 450px">
+
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="file:///C:/Users/rbutler/WebstormProjects/Accounting/jquery/jquery-1.7.1/jquery-1.7.1.js"></script>
+<script type="text/javascript" src="file:///C:/Users/rbutler/WebstormProjects/Accounting/jquery/plugins/jquery-ui-1.8.18/jquery-ui-1.8.18.custom.js"></script>
+<script type="text/javascript" src="file:///C:/Users/rbutler/WebstormProjects/Accounting/jquery/plugins/jquery-ui-1.8.18/jquery.ui.dialog.js"></script>
+<script>
+    //$("#login").button();
+    $('input:text, input:password, #login')
+            .button()
+            .css({
+                'font' : 'inherit',
+                'color' : 'inherit',
+                'text-align' : 'left',
+                'outline' : 'none',
+                'cursor' : 'text',
+                'padding' : '0'
+            });
+
+</script>
+</body>
+</html>

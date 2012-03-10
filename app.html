@@ -1,0 +1,56 @@
+<html>
+<head>
+    <link rel="stylesheet" href="css/reset.css" type="text/css">
+    <link rel="stylesheet" href="css/redmond/jquery-ui-1.8.18.custom.css" type="text/css">
+    <link rel="stylesheet" href="css/layout/layout-default-latest.css" type="text/css">
+    <script type="text/javascript" src="http://layout.jquery-dev.net//lib/js/jquery-latest.js"></script>
+    <script type="text/javascript" src="http://layout.jquery-dev.net//lib/js/jquery-ui-latest.js"></script>
+    <script type="text/javascript" src="http://layout.jquery-dev.net/lib/js/jquery.layout-latest.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("body").layout({
+                applyDefaultStyles: true,
+                resizerDragOpacity: 0.5,
+                north: {
+                    //spacing_open:			1			// cosmetic spacing
+                    //,	togglerLength_open:		0			// HIDE the toggler button
+                    	togglerLength_closed:	-1			// "100%" OR -1 = full width of pane
+                    ,	resizable: 				false
+                    ,	slidable:				false
+                    //	override default effect
+                    ,	fxName:					"none"
+                    ,size: "100"
+                },
+                west: {
+
+                    size : "350"
+
+                },
+                center: {
+                    onresize : function() {
+
+                        getFiles( {
+                            fid: $("input[name=fid]").val(),
+                            showTools: $("input[name=showTools]").val()
+                        });
+
+                    }
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+<div class="ui-layout-center">Center</div>
+<div class="ui-layout-north">
+    <div class="ui-widget ui-widget-content ui-corner-br" style="position: absolute; width: 100%; height: 25px; top: 0; left: 0;background: #1c5785">
+        <div style="padding: 0 9px">Home</div>
+        <div style="padding: 0 9px">Account</div>
+        <div style="padding: 0 9px">one</div>
+    </div>
+    <img src="file:///C:/Users/rbutler/WebstormProjects/Accounting/images/Accountingjs_small.png" />
+</div>
+<div class="ui-layout-east">East</div>
+<div class="ui-layout-west">West</div>
+</body>
+</html>
